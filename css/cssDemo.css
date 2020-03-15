@@ -1,0 +1,328 @@
+*{margin:0;padding:0;}
+
+ul{list-style:none;}
+a{text-decoration:none;color:#fff;}
+img{display:block;}
+
+/*头部*/
+.header{
+    width:100%;
+    height:80px;
+    background:#000;
+}
+
+.header .logo img{
+    width:260px;
+    float:left;
+    margin-top:16px;
+    margin-left:150px;
+}
+
+.header .nav{
+    height:80px;
+    float:right;
+}
+
+.header .nav ul{margin-right:50px;}
+
+.header .nav ul li{
+    width:100px;
+    float:left;
+    line-height:80px;
+    text-align:center;
+    font-weight:bolder;
+    font-size:16px;
+    font-family:"微软雅黑";
+}
+
+.header .nav ul li a:hover{
+    color:#07cbc9;
+}
+/* 老师您好，问题1：为什么我用.header .nav li:hover不起作用呢？要li a:hover才起作用？ */
+
+/* banner图 */
+.main .banner img{
+    width:100%;
+    height:600px;
+    position:relative;
+} 
+
+.topLayer{
+    width:100%;
+    height:600px;
+    position:absolute;
+    top:80px;
+    z-index:1;
+    background:#000;
+    opacity:0.3;
+}
+
+.userinfo{
+    width:600px;
+    height:500px;
+    z-index:2;
+    position:absolute;
+    top:380px;
+    left:50%;
+    margin-top:-250px;
+    margin-left:-300px;
+}
+
+.userinfo input,textarea{
+    display:block;
+    margin:34px auto;
+    border:2px solid rgb(146, 146, 146);
+    background:none;
+    border-radius:4px;
+    color:rgb(146, 146, 146);
+    font-family:"微软雅黑"；
+}
+
+.userinfo .info:hover{
+    border-color: #07cbc9;
+    background:#fff;
+}
+.userinfo textarea:hover{
+    border-color: #07cbc9;
+    background:#fff;
+}
+.userinfo .sub:hover{
+    border:none;
+    background:#07cbc9;
+    color:#fff;
+}
+
+/* 老师您好，问题2：我不适用display:block时，input和textarea有间距，请问是只能用display:blcok
+方法清除间距吗？background:transparent和none使用效果是一样的吗？这里垂直居中我是使用margin计算
+方式实现的，请问还有其他方法可以实现吗？？ */
+
+.userinfo input.info{
+    width:505px;
+    height:39px;  
+}
+
+.userinfo textarea{
+    width:505px;
+    height:115px;
+}
+
+.userinfo input.sub{
+    width:123px;
+    height:39px;
+}
+
+/* about头部和gallery头部 */
+.aboutHeader,.galleryHeader{
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.aboutHeader h1,
+.galleryHeader h1{
+    margin-top:40px;
+    font-size:35px;
+}
+.aboutHeader .underline,
+.galleryHeader .underline{
+    width:50px;
+    margin:10px auto;
+    border-bottom:2px solid #07cbc9;
+}
+.aboutHeader .word,
+.galleryHeader .word{
+    width:400px;
+    margin:10px auto;
+    font-size:13px;
+    color:rgb(146, 146, 146);
+}
+
+/* aboout中间内容 */
+
+.aboutMain{
+    width:1210px;
+    height:435px;
+    margin:40px auto;
+    position:relative;
+}
+.aboutMain .mainLeft,.mainMiddle,.mainRight{
+    float:left;
+}
+.aboutMain .mainLeft{
+    width:210px;
+    text-align:center;
+    font-size:28px;
+    margin-left:70px;
+}
+.aboutMain .mainMiddle{
+    width:650px;
+}
+
+.aboutMain .mainRight .smallbox{
+    width:238px;
+    height:144px;
+    text-align:center;
+    border:1px solid #07cbc9;
+    margin:20px;
+}
+.aboutMain .mainRight h2{
+    margin:20px;
+    font-size:30px;
+    font-weight:bolder;
+}
+.aboutMain .mainRight .underline2{
+    width:40px;
+    margin:20px auto;
+    border-bottom:2px solid #07cbc9;
+}
+.aboutMain .mainButton{
+    z-index:2;
+    border:1px solid rgb(214, 214, 214);
+    width:370px;
+    height:246px;
+    background:rgba(255, 255, 255, 0.5);
+    position:absolute;
+    bottom:30px;
+    left:70px;
+}
+
+.aboutMain .mainButton p{
+    padding:20px;
+    line-height:1.5em;
+}
+.aboutMain .mainButton button{
+    width:102px;
+    height:45px;
+    margin:20px 134px;
+    background:#000;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+}
+
+.aboutMain .mainButton button:hover{
+    background:#07cbc9;
+}
+/* 老师您好，问题4：为什么我这里设置margin:0 auto不会自动居中？我只好手动计算设置值居中了 */
+
+/* about图文混排 */
+.aPicAndDes{
+    width:100%;
+    margin:60px auto;
+    overflow:hidden;
+}
+/* .aPicAndDes .aPic{
+    width:25%;
+    height:400px;
+    float:left;
+} 老师您好，问题3：本身我是用这一段写的，不知道为什么出来效果图片会覆盖住右边蓝色部分。
+然后才使用的.aPic img{}写的样式，出来的效果才没问题，这是为什么呢？*/
+
+.aPicAndDes .aPic img{
+    width:25%;
+    height:300px;
+    float:left;
+}
+.aPicAndDes .aDes{
+    float:left;
+    width:25%;
+    height:300px;
+    background:#07cbc9;
+}
+
+.aPicAndDes .aDes h2,
+.aPicAndDes .aDes p{
+    margin:15px;
+    color:#fff;
+    height:40px;
+}
+
+.aPicAndDes .aDes div{
+    margin:15px;
+    font-size:11px;
+    color:rgb(245, 245, 245);
+    height:100px;
+}
+
+.aPicAndDes .aDes button{
+    border:1px solid #fff;
+    width:80px;
+    height:30px;
+    background:#000;
+    text-align:center;
+    line-height:30px;
+    color:#fff;
+    font-size:13px;
+    margin:10px auto;
+    display:block;
+    cursor:pointer;
+}
+
+.triangle{
+    position:relative;
+}
+
+.triangle:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:100%;
+    margin-top:-20px;
+    border-right:30px solid #07cbc9;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+}
+
+.triangle2{
+    position:relative;
+}
+
+.triangle2:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:100%;
+    margin-top:-20px;
+    border-left:30px solid #07cbc9;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+}
+
+.aPicAndDes button:hover{
+    color:black;
+    background:transparent;
+    border-color:#000;
+}
+
+/* gallery图文混排 */
+.gPicAndDes{
+    width:1200px;
+    margin:40px auto;
+    overflow:hidden;
+}
+
+.gPicAndDes ul li{
+    float:left;
+    margin:20px;
+}
+.gPicAndDes ul li p{
+    background:#000;
+    height:64px;
+    color:#fff;
+    line-height:64px;
+    padding-left:20px;
+}
+
+/* 底部 */
+.footer{
+    width:100%;
+    height:80px;
+    background:#000;
+    color:#fff;
+    font-weight:bolder;
+    letter-spacing:5px;
+    text-align:center;
+    line-height:80px;
+}
+
+
